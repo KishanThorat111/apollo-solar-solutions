@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Zap, Shield, TrendingUp, Award, Battery, FileCheck, Wrench } from 'lucide-react';
 
@@ -174,10 +175,11 @@ export default function Hero() {
 
             {/* Featured Image */}
             <div className="mt-4 sm:mt-6 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl">
-              <img
+              <OptimizedImage
                 src="/images/hero_indian_solar.jpg"
                 alt="Solar panels on Indian homes"
                 className="w-full h-40 sm:h-48 lg:h-56 object-cover"
+                priority
               />
             </div>
           </div>

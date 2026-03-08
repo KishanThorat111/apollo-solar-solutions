@@ -1,5 +1,6 @@
 import { useEffect, useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Shield, TrendingUp } from 'lucide-react';
@@ -113,10 +114,11 @@ export default function Section1Hero() {
         ref={circleRef}
         className="absolute left-[18vw] top-[14vh] w-[62vmin] h-[62vmin] min-w-[520px] min-h-[520px] max-w-[760px] max-h-[760px] circle-image will-change-transform"
       >
-        <img
+        <OptimizedImage
           src="/images/hero_sun.jpg"
           alt="Solar energy"
           className="w-full h-full object-cover"
+          priority
         />
       </div>
 

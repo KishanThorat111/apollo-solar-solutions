@@ -1,5 +1,6 @@
 import { useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Badge } from '@/components/ui/badge';
 
@@ -133,7 +134,7 @@ export default function Section8Gallery() {
             }`}
           >
             <div className={`relative overflow-hidden ${index === 3 ? 'aspect-[21/9]' : 'aspect-[4/3]'}`}>
-              <img
+              <OptimizedImage
                 src={item.src}
                 alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

@@ -1,5 +1,6 @@
 import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Home, Building2, Wrench, ArrowRight } from 'lucide-react';
 
@@ -117,7 +118,7 @@ export default function Section3Services() {
         ref={circleRef}
         className="absolute left-[16vw] top-[14vh] w-[62vmin] h-[62vmin] min-w-[520px] min-h-[520px] max-w-[760px] max-h-[760px] circle-image will-change-transform"
       >
-        <img
+        <OptimizedImage
           src="/images/installer_portrait.jpg"
           alt="Solar technician"
           className="w-full h-full object-cover"
@@ -153,7 +154,7 @@ export default function Section3Services() {
             className="bg-white rounded-2xl p-4 shadow-card flex items-center gap-4 will-change-transform hover:shadow-lg transition-shadow cursor-pointer group"
           >
             <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
-              <img
+              <OptimizedImage
                 src={service.image}
                 alt={service.title}
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"

@@ -1,5 +1,6 @@
 import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, MapPin, Clock, Sun, ArrowRight } from 'lucide-react';
@@ -197,7 +198,7 @@ export default function Section9Contact() {
               ref={circleRef}
               className="w-[56vmin] h-[56vmin] min-w-[400px] min-h-[400px] max-w-[600px] max-h-[600px] circle-image will-change-transform"
             >
-              <img
+              <OptimizedImage
                 src="/images/closing_sun.jpg"
                 alt="Solar energy"
                 className="w-full h-full object-cover"

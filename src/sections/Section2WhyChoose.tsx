@@ -1,5 +1,6 @@
 import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Zap, DollarSign, FileText, Headphones } from 'lucide-react';
 
@@ -127,7 +128,7 @@ export default function Section2WhyChoose() {
         ref={circleRef}
         className="absolute right-[-6vw] top-[16vh] w-[62vmin] h-[62vmin] min-w-[520px] min-h-[520px] max-w-[760px] max-h-[760px] circle-image will-change-transform"
       >
-        <img
+        <OptimizedImage
           src="/images/rooftop_panels.jpg"
           alt="Rooftop solar panels"
           className="w-full h-full object-cover"

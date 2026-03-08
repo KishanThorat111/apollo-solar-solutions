@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Phone, Mail, MapPin, Clock, Sun, ArrowRight } from 'lucide-react';
 
@@ -130,11 +131,10 @@ export default function Contact() {
             {/* Right - Image */}
             <div className="relative">
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden h-[250px] sm:h-[350px] lg:h-full min-h-[300px] lg:min-h-[400px]">
-                <img
+                <OptimizedImage
                   src="/images/aerial_indian.jpg"
                   alt="Solar installations in Belagavi"
                   className="w-full h-full object-cover"
-                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-solar-navy/80 to-transparent" />
               </div>

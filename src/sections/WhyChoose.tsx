@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Zap, DollarSign, FileText, Headphones, Star } from 'lucide-react';
+import OptimizedImage from '../components/OptimizedImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,7 +87,7 @@ export default function WhyChoose() {
           {/* Left - Image */}
           <div ref={imageRef} className="relative order-2 lg:order-1">
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl">
-              <img
+              <OptimizedImage
                 src="/images/technician_indian.jpg"
                 alt="Indian solar technician"
                 className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"

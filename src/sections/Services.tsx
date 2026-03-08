@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Home, Building2, Wrench, ArrowRight, Sun, Droplets } from 'lucide-react';
+import OptimizedImage from '../components/OptimizedImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +37,7 @@ const services = [
   },
   {
     icon: Sun,
-    title: 'KUSMB & Credal Projects',
+    title: 'KUSMB & KREDL Projects',
     description: 'Government project installations with complete documentation support.',
     image: '/images/aerial_indian.jpg',
     features: ['Govt Projects', 'Documentation', 'Full Support'],
@@ -104,7 +105,7 @@ export default function Services() {
             >
               {/* Image */}
               <div className="relative h-44 sm:h-48 overflow-hidden">
-                <img
+                <OptimizedImage
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

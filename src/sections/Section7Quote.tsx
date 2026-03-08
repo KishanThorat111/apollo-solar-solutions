@@ -1,5 +1,6 @@
 import { useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -120,7 +121,7 @@ export default function Section7Quote() {
         ref={circleRef}
         className="absolute right-[-6vw] top-[16vh] w-[62vmin] h-[62vmin] min-w-[520px] min-h-[520px] max-w-[760px] max-h-[760px] circle-image will-change-transform"
       >
-        <img
+        <OptimizedImage
           src="/images/sunny_field.jpg"
           alt="Solar field"
           className="w-full h-full object-cover"

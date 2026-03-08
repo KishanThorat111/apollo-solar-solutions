@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, IndianRupee, TrendingDown, Clock, Shield, Check } from 'lucide-react';
 
@@ -214,7 +215,7 @@ export default function Savings() {
           {/* Right - Image */}
           <div ref={imageRef} className="relative">
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl">
-              <img
+              <OptimizedImage
                 src="/images/solar_farm_indian.jpg"
                 alt="Solar farm in India"
                 className="w-full h-[250px] sm:h-[350px] lg:h-[450px] object-cover"

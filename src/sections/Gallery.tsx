@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from '../components/OptimizedImage';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -133,11 +134,10 @@ export default function Gallery() {
               }`}
             >
               <div className={`aspect-[4/3] overflow-hidden ${index === 3 ? 'sm:aspect-[4/3]' : ''}`}>
-                <img
+                <OptimizedImage
                   src={item.src}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
                 />
               </div>
               

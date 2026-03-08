@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import OptimizedImage from '../components/OptimizedImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,7 +122,7 @@ export default function Testimonials() {
               {/* Author */}
               <div className="flex items-center gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-slate-100">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={testimonial.image}
                     alt={testimonial.author}
                     className="w-full h-full object-cover"
@@ -160,7 +161,7 @@ export default function Testimonials() {
                     </p>
                     <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
                       <div className="w-10 h-10 rounded-full overflow-hidden">
-                        <img
+                        <OptimizedImage
                           src={testimonial.image}
                           alt={testimonial.author}
                           className="w-full h-full object-cover"
